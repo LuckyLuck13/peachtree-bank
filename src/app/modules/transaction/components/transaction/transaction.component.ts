@@ -1,4 +1,7 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TransactionList } from 'src/app/shared/model/transaction/transaction-list';
+import { TransactionService } from '../../services/transaction.service';
 
 @Component({
   selector: 'app-transaction',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionComponent implements OnInit {
 
-  constructor() { }
+  transactionList: TransactionList;
+
+  constructor(private transactionService: TransactionService,
+              private datePipe: DatePipe) { }
 
   ngOnInit(): void {
+    this.transactionService.loadTransactionList().subscribe(list => {
+      this.transactionList = list;
+    });
   }
 
 }
