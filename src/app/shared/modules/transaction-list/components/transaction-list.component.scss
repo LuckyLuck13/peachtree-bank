@@ -1,0 +1,91 @@
+@import '../../../../../assets/styles/var';
+
+.content {
+
+  .list-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: map-get($colors, transaction-list);
+    border-left: 2px solid map-get($colors, transaction-list);
+    border-right: 2px solid map-get($colors, transaction-list);
+
+    &:first-child {
+      border-top: 2px solid map-get($colors, transaction-list);
+    }
+    &:last-child {
+      border-bottom: 2px solid map-get($colors, transaction-list);
+    }
+  
+    .col-date {
+      width: 15%;
+      padding: 2px;
+    }
+  
+    .col-logo {
+      width: 15%;
+      padding: 2px;
+      @media screen and (max-width: $small-res) {
+        display: none;
+      }
+
+      .img-logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  
+    .col-customer {
+      width: 53%;
+      text-align: start;
+      padding-left: 5px;
+      padding: 5px;
+      word-break: break-word;
+
+      .merchant-name {
+        font-weight: bold;
+      }
+
+      .transaction-type {
+
+      }
+    }
+  
+    .col-amount {
+      width: 20%;
+      padding: 5px;
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+      font-size: 1.05em;
+
+      @media screen and (max-width: $small-res) {
+        .code {
+          display: none;
+        }
+      }
+      @media screen and (max-width: $very-small-res) {
+        flex-flow: column;
+
+        .indicator {
+          justify-content: center;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      span {
+        display: inline-block;
+        padding: 0px 3px;
+      }
+    }
+  }
+}
