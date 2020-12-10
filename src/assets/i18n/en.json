@@ -3,8 +3,8 @@
   "transaction.filter.search": "Search by typing...",
   "transaction.sortBy": "Sort by",
   "transaction.sort.date": "Date",
-  "transaction.sort.date.asc": "Sort by date asc",
-  "transaction.sort.date.desc": "Sort by date desc",
+  "transaction.sort.date.asc": "Lowest first",
+  "transaction.sort.date.desc": "Highest first",
   "transaction.sort.beneficiary": "Beneficiary",
   "transaction.sort.amount": "Amount"
 }

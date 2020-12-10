@@ -10,6 +10,7 @@
 
   &__filter {
     @media screen and (max-width: $medium-res) {
+      display: flex;
       justify-content: center;
     }
   }

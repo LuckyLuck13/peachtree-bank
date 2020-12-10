@@ -1,3 +1,3 @@
 export class Dates {
-  valueDate: number;
+  valueDate: string;
 }
