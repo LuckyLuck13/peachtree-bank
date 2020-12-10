@@ -2,31 +2,82 @@
 @import '../../../../../assets/styles/var';
 
 .page {
-  &__title {
-    font-family: 'Kanit-Thin';
-    background-color: map-get($colors, header-color);
-    color: map-get($colors, header-font-color);
-    height: 50px;
-    display: flex;
 
-    .briefcase-icon {
-      background: url('../../../../../assets/icons/briefcase.png');
-      width: 30px;
-      height: 30px;
-      display: inline-block;
-      margin: auto $padding-horizontal;      
+  display: flex;
+  justify-content: flex-start;
+  margin: 30px;
+
+  @media screen and (max-width: $medium-res) {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .make_transfer {
+    margin-right: 30px;
+    width: 30%;
+
+    @media screen and (max-width: $medium-res) {
+      width: 100%;
+    }
+
+    &__title {
+      font-family: 'Kanit-Thin';
+      background-color: map-get($colors, header-color);
+      color: map-get($colors, header-font-color);
+      height: 35px;
+      display: flex;
+      word-break: break-word;
+
+      .arrow-icon {
+        background: url('../../../../../assets/icons/arrows.png');
+        background-repeat: no-repeat;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin: auto $padding-horizontal;      
+      }
     }
 
     .header {
       margin: auto;
+      padding-right: 3px;
     }
   }
 
-  &__filters {
-    padding: $padding-vertical $padding-horizontal;
-  }
+  .transactions {
+    width: 70%;
 
-  &__list {
-    padding: $padding-vertical $padding-horizontal;
+    @media screen and (max-width: $medium-res) {
+      width: 100%;
+    }
+
+    &__title {
+      font-family: 'Kanit-Thin';
+      background-color: map-get($colors, header-color);
+      color: map-get($colors, header-font-color);
+      height: 50px;
+      display: flex;
+
+      .briefcase-icon {
+        background: url('../../../../../assets/icons/briefcase.png');
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin: auto $padding-horizontal;      
+      }
+
+      .header {
+        margin: auto;
+      }
+    }
+
+    &__filters {
+      padding: $padding-vertical $padding-horizontal;
+    }
+
+    &__list {
+      padding: $padding-vertical $padding-horizontal;
+    }
   }
 }

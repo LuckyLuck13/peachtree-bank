@@ -1,7 +1,7 @@
 .input-field {
   width: 300px;
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 500px) {
     width: 200px;
   }
 }

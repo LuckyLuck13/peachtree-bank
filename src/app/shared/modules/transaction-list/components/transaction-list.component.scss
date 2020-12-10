@@ -64,12 +64,12 @@
     font-weight: bold;
     font-size: 1.05em;
 
-    @media screen and (max-width: $small-res) {
+    @media screen and (max-width: $medium-res) {
       .code {
         display: none;
       }
     }
-    @media screen and (max-width: $very-small-res) {
+    @media screen and (max-width: $small-res) {
       flex-flow: column;
 
       .indicator {

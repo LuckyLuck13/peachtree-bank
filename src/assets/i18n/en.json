@@ -1,4 +1,5 @@
 {
+  "makeTransfer.header.title": "Make a transfer",
   "transaction.header.title": "Recent transactions",
   "transaction.filter.search": "Search by typing...",
   "transaction.sortBy": "Sort by",

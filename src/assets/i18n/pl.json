@@ -1,4 +1,5 @@
 {
+  "makeTransfer.header.title": "Wykonaj przelew",
   "transaction.header.title": "Ostatnie transakcje",
   "transaction.filter.search": "Wpisz szukaną frazę...",
   "transaction.sortBy": "Sortuj wg",
