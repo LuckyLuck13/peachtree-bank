@@ -10,7 +10,7 @@
     <div class="list-conteiner" *ngFor="let item of list.data">
       <div [ngStyle]="{'background-color': item.categoryCode, 'min-height': '70px', 'width': '7px'}"></div>
       <div class="col-date">
-        <span>{{item.dates.valueDate | date: 'MMM-dd'}}</span>
+        <span>{{item.dates.valueDate | date: 'MMM. dd'}}</span>
       </div>
       <div class="col-logo">
         <img class="img-logo" src="{{item.merchant.name | logoPathPipe}}">
