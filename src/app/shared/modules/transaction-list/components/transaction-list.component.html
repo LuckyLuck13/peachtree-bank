@@ -1,12 +1,5 @@
-<div class="page">
-  <section class="page__title">
-    <span class="briefcase-icon"></span>
-    <h3 class="header">Recent Transactions</h3>
-  </section>
-  <section class="page__filters">
-
-  </section>
-  <section class="page__content" *ngIf="list && list.data && list.data.length">
+<ng-container *ngIf="list && list.data && list.data.length">
+  <div *ngIf="list && list.data && list.data.length">
     <div class="list-conteiner" *ngFor="let item of list.data">
       <div [ngStyle]="{'background-color': item.categoryCode, 'min-height': '70px', 'width': '7px'}"></div>
       <div class="col-date">
@@ -35,5 +28,5 @@
         </div>
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</ng-container>

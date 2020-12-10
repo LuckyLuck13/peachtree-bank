@@ -12,8 +12,7 @@ export class TransactionComponent implements OnInit {
 
   transactionList: TransactionList;
 
-  constructor(private transactionService: TransactionService,
-              private datePipe: DatePipe) { }
+  constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
     this.transactionService.loadTransactionList().subscribe(list => {

@@ -1,0 +1,32 @@
+@import '../../../../../assets/styles/fonts';
+@import '../../../../../assets/styles/var';
+
+.page {
+  &__title {
+    font-family: 'Kanit-Thin';
+    background-color: map-get($colors, header-color);
+    color: map-get($colors, header-font-color);
+    height: 50px;
+    display: flex;
+
+    .briefcase-icon {
+      background: url('../../../../../assets/icons/briefcase.png');
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: auto $padding-horizontal;      
+    }
+
+    .header {
+      margin: auto;
+    }
+  }
+
+  &__filters {
+    padding: $padding-vertical $padding-horizontal;
+  }
+
+  &__list {
+    padding: $padding-vertical $padding-horizontal;
+  }
+}
