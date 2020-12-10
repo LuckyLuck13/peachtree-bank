@@ -1,3 +1,4 @@
 {
-  "transaction.header.title": "Ostatnie transakcje"
+  "transaction.header.title": "Ostatnie transakcje",
+  "transaction.filter.search": "Wpisz szukaną frazę..."
 }

@@ -1,6 +1,6 @@
-import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TransactionList } from 'src/app/shared/model/transaction/transaction-list';
+import { TransactionFilter } from 'src/app/shared/modules/transaction-filters/model/transaction-filter';
 import { TransactionService } from '../../services/transaction.service';
 
 @Component({
@@ -15,7 +15,15 @@ export class TransactionComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.loadTransactionList().subscribe(list => {
+    this.loadTransactionList(null as any);
+  }
+
+  onFilter(filter: TransactionFilter): void {
+    this.loadTransactionList(filter);
+  }
+
+  private loadTransactionList(filter: TransactionFilter): void {
+    this.transactionService.loadTransactionList(filter).subscribe(list => {
       this.transactionList = list;
     });
   }

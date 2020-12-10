@@ -1,3 +1,4 @@
 {
-  "transaction.header.title": "Recent transactions"
+  "transaction.header.title": "Recent transactions",
+  "transaction.filter.search": "Search by typing..."
 }
