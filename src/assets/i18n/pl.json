@@ -1,4 +1,10 @@
 {
   "transaction.header.title": "Ostatnie transakcje",
-  "transaction.filter.search": "Wpisz szukaną frazę..."
+  "transaction.filter.search": "Wpisz szukaną frazę...",
+  "transaction.sortBy": "Sortuj wg",
+  "transaction.sort.date": "Data",
+  "transaction.sort.date.asc": "Sortuj rosnąco",
+  "transaction.sort.date.desc": "Sortuj malejąco",
+  "transaction.sort.beneficiary": "Beneficjant",
+  "transaction.sort.amount": "Kwota"
 }

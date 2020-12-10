@@ -1,5 +1,31 @@
 <div class="container">
-  <div class="item">
+  <div class="container__filter">
     <app-input-control [control]="filterControl" [label]="'transaction.filter.search'"></app-input-control>
+  </div>
+  <div class="container__sort-items">
+    <div class="text">
+      <span>{{'transaction.sortBy' | translate}}</span>
+    </div>
+    <div>
+      <button class="sort-button" mat-button mat-stroked-button [matMenuTriggerFor]="menu">
+        <span>{{'transaction.sort.date' | translate}}</span>
+        <span class="material-icons">
+          arrow_drop_down
+        </span>
+      </button>
+      <mat-menu #menu>
+        <button mat-menu-item (click)="sortByDate(sortOrder.ASC)">{{'transaction.sort.date.asc' | translate}}</button>
+        <button mat-menu-item
+          (click)="sortByDate(sortOrder.DESC)">{{'transaction.sort.date.desc' | translate }}</button>
+      </mat-menu>
+    </div>
+    <div>
+      <button class="sort-button" mat-stroked-button
+        (click)="sortByField(sortFields.BENEFICIARY, sortType.TEXT)">{{'transaction.sort.beneficiary' | translate}}</button>
+    </div>
+    <div>
+      <button class="sort-button" mat-stroked-button
+        (click)="sortByField(sortFields.AMOUNT, sortType.NUMBER)">{{'transaction.sort.amount' | translate}}</button>
+    </div>
   </div>
 </div>

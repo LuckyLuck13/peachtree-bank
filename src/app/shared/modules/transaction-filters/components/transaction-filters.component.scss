@@ -1,0 +1,39 @@
+@import '../../../../../assets/styles/var';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $medium-res) {
+    display: block;
+  }
+
+  &__filter {
+    @media screen and (max-width: $medium-res) {
+      justify-content: center;
+    }
+  }
+
+  &__sort-items {
+    display: flex;
+    align-items: center;
+
+    .text {
+      font-weight: bold;
+      padding-right: 10px;
+    }
+
+    @media screen and (max-width: $medium-res) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: $small-res) {
+      flex-direction: column;
+
+      .sort-button {
+        width: 120px;
+      }
+    }
+  }
+
+}

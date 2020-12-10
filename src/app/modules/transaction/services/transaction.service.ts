@@ -38,7 +38,6 @@ export class TransactionService {
   }
 
   private requestTransactionList(): Observable<TransactionList> {
-    console.log('request');
     return this.httpClient.get<TransactionList>(this.GET_TRANSACTION_LIST_URL())
       .pipe(
         tap(list => this.transactionList = list),

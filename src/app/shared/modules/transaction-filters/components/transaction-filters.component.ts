@@ -2,7 +2,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { BaseComponent } from 'src/app/shared/abstract/base.component';
 import { takeUntil } from 'rxjs/operators';
-import { TransactionFilter } from '../model/transaction-filter';
+import { SortOrder, TransactionFilter } from '../model/transaction-filter';
+import { SortType, TransactionSort } from '../model/transaction-sort';
+import { TransactionSortFields } from '../model/transaction-sort-fields.enum';
 
 @Component({
   selector: 'app-transaction-filters',
@@ -11,9 +13,13 @@ import { TransactionFilter } from '../model/transaction-filter';
 })
 export class TransactionFiltersComponent extends BaseComponent implements OnInit {
   @Output() onFilter = new EventEmitter<TransactionFilter>();
-  @Output() onSort = new EventEmitter<TransactionFilter>();
+  @Output() onSort = new EventEmitter<TransactionSort>();
 
   filterControl = new FormControl();
+  sort = new TransactionSort();
+  sortOrder = SortOrder;
+  sortFields = TransactionSortFields;
+  sortType = SortType;
 
   constructor() {
     super();
@@ -23,11 +29,24 @@ export class TransactionFiltersComponent extends BaseComponent implements OnInit
     this.setUpFilterControlChange();
   }
 
+  sortByField(field: TransactionSortFields, type: SortType): void {
+    this.emitSort(({ ...this.sort, field, type }))
+  }
+
+  sortByDate(order: SortOrder): void {
+    this.emitSort(({ field: this.sortFields.DATE, order, type: SortType.DATE }))
+  }
+
   private setUpFilterControlChange(): void {
     this.filterControl.valueChanges
       .pipe(
         takeUntil(this.destroySubject)
       ).subscribe(search => this.onFilter.emit(({ search })));
+  }
+
+  private emitSort(sort: TransactionSort): void {
+    this.sort = sort;
+    this.onSort.emit(this.sort);
   }
 
 }

@@ -4,7 +4,7 @@
     <h3 class="header">{{'transaction.header.title' | translate }}</h3>
   </section>
   <section class="page__filters">
-    <app-transaction-filters (onFilter)="onFilter($event)"></app-transaction-filters>
+    <app-transaction-filters (onFilter)="onFilter($event)" (onSort)="onSort($event)"></app-transaction-filters>
   </section>
   <section class="page__list">
     <app-transaction-list [transactionList]="transactionList"></app-transaction-list>
