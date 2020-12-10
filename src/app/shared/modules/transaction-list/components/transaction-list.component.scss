@@ -1,4 +1,4 @@
-@import '../../../../../assets/styles/var';
+@import '../../../../../styles.scss';
 
 .content {
 
@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-family: 'Kanit-Light';
     min-height: 70px;
     text-align: center;
     border-width: 1px;
