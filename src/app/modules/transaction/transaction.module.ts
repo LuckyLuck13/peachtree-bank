@@ -4,6 +4,7 @@ import { TransactionComponent } from './components/transaction/transaction.compo
 import { TransactionRoutingModule } from './transaction-routing.module';
 import { TransactionService } from './services/transaction.service';
 import { TransactionListModule } from 'src/app/shared/modules/transaction-list/transaction-list.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [TransactionComponent],
@@ -11,6 +12,7 @@ import { TransactionListModule } from 'src/app/shared/modules/transaction-list/t
     CommonModule,
     TransactionRoutingModule,
     TransactionListModule,
+    TranslateModule.forChild()
   ],
   providers: [TransactionService, DatePipe]
 })
