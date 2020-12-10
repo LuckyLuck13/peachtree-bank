@@ -1,92 +1,121 @@
-@import '../../../../../styles.scss';
+@import '../../../../../assets/styles/fonts';
+@import '../../../../../assets/styles/var';
 
-.content {
-
-  .list-conteiner {
+.page {
+  &__title {
+    font-family: 'Kanit-Thin';
+    background-color: map-get($colors, header-color);
+    color: map-get($colors, header-font-color);
+    height: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-family: 'Kanit-Light';
-    min-height: 70px;
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: map-get($colors, transaction-list);
-    border-left: 2px solid map-get($colors, transaction-list);
-    border-right: 2px solid map-get($colors, transaction-list);
-
-    &:first-child {
-      border-top: 2px solid map-get($colors, transaction-list);
-    }
-    &:last-child {
-      border-bottom: 2px solid map-get($colors, transaction-list);
-    }
   
-    .col-date {
-      width: 15%;
-      padding: 2px;
+    .briefcase-icon {
+      background: url('../../../../../assets/icons/briefcase.png');
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: auto $padding-horizontal;      
     }
-  
-    .col-logo {
-      width: 15%;
-      padding: 2px;
-      @media screen and (max-width: $small-res) {
-        display: none;
-      }
 
-      .img-logo {
-        width: 40px;
-        height: 40px;
-      }
+    .header {
+      margin: auto;
     }
-  
-    .col-customer {
-      width: 53%;
-      text-align: start;
-      padding-left: 5px;
-      padding: 5px;
-      word-break: break-word;
+  }
 
-      .merchant-name {
-        font-weight: bold;
-      }
+  &__filters {
+    padding: $padding-vertical $padding-horizontal;
+  }
 
-      .transaction-type {
+  &__content {
+    padding: $padding-vertical $padding-horizontal;
 
-      }
-    }
-  
-    .col-amount {
-      width: 20%;
-      padding: 5px;
+    .list-conteiner {
       display: flex;
-      justify-content: flex-end;
-      font-weight: bold;
-      font-size: 1.05em;
-
-      @media screen and (max-width: $small-res) {
-        .code {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-family: 'Kanit-Light';
+      min-height: 70px;
+      text-align: center;
+      border-width: 1px;
+      border-style: solid;
+      border-color: map-get($colors, transaction-list);
+      border-left: 2px solid map-get($colors, transaction-list);
+      border-right: 2px solid map-get($colors, transaction-list);
+  
+      &:first-child {
+        border-top: 2px solid map-get($colors, transaction-list);
+      }
+      &:last-child {
+        border-bottom: 2px solid map-get($colors, transaction-list);
+      }
+    
+      .col-date {
+        width: 15%;
+        padding: 2px;
+      }
+    
+      .col-logo {
+        width: 15%;
+        padding: 2px;
+        @media screen and (max-width: $small-res) {
           display: none;
         }
-      }
-      @media screen and (max-width: $very-small-res) {
-        flex-flow: column;
-
-        .indicator {
-          justify-content: center;
+  
+        .img-logo {
+          width: 40px;
+          height: 40px;
         }
       }
-
-      div {
+    
+      .col-customer {
+        width: 53%;
+        text-align: start;
+        padding-left: 5px;
+        padding: 5px;
+        word-break: break-word;
+  
+        .merchant-name {
+          font-weight: bold;
+        }
+  
+        .transaction-type {
+  
+        }
+      }
+    
+      .col-amount {
+        width: 20%;
+        padding: 5px;
         display: flex;
         justify-content: flex-end;
-      }
-
-      span {
-        display: inline-block;
-        padding: 0px 3px;
+        font-weight: bold;
+        font-size: 1.05em;
+  
+        @media screen and (max-width: $small-res) {
+          .code {
+            display: none;
+          }
+        }
+        @media screen and (max-width: $very-small-res) {
+          flex-flow: column;
+  
+          .indicator {
+            justify-content: center;
+          }
+        }
+  
+        div {
+          display: flex;
+          justify-content: flex-end;
+        }
+  
+        span {
+          display: inline-block;
+          padding: 0px 3px;
+        }
       }
     }
   }
+
 }

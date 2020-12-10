@@ -1,6 +1,11 @@
 $colors: (
-  transaction-list: rgb(202, 202, 202)
+  transaction-list: rgb(202, 202, 202),
+  header-color: rgb(70, 137, 149),
+  header-font-color: rgb(250, 250, 250),
 );
 
 $very-small-res: 250px;
 $small-res: 450px;
+
+$padding-vertical: 0px;
+$padding-horizontal: 12px;
