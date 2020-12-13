@@ -2,9 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { Const } from 'src/app/shared/model/const';
 import { TransactionItem } from 'src/app/shared/model/transaction';
+import { CreditDebitIndicator } from 'src/app/shared/model/transaction/creditDebitIndicator.enum';
 import { TransactionList } from 'src/app/shared/model/transaction/transaction-list';
 import { TransactionFilter } from 'src/app/shared/modules/transaction-filters/model/transaction-filter';
+import { Transfer } from 'src/app/shared/modules/transfer/model/transfer';
+import * as moment from 'moment';
 
 @Injectable()
 export class TransactionService {
@@ -28,6 +32,31 @@ export class TransactionService {
           return ts;
         })
       )
+  }
+
+  addTransaction(list: TransactionList, transfer: Transfer): void {
+    list.data.push(this.convertToTransactionItem(transfer));
+  }
+
+  private convertToTransactionItem(transfer: Transfer): TransactionItem {
+    return {
+      categoryCode: '#919191',
+      dates: {
+        valueDate: moment().format('YYYY-MM-DD')
+      },
+      merchant: {
+        accountNumber: '827432874283749823749',
+        name: transfer.to
+      },
+      transaction: {
+        amountCurrency: {
+          amount: transfer.amount,
+          currencyCode: Const.amountCurrency
+        },
+        creditDebitIndicator: CreditDebitIndicator.DBIT,
+        type: 'Card Payment'
+      }
+    }
   }
 
   private getTransactionList(): Observable<TransactionList> {

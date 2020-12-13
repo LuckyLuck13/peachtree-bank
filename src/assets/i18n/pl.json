@@ -1,4 +1,7 @@
 {
+  "form.error.required": "Pole jest wymagane",
+  "form.error.bankBalanceOverdraft": "Przekroczono maksymalną kwota transferu",
+  "form.error.min": "Minimalna kwota transferu 0.01",
   "makeTransfer.header.title": "Wykonaj przelew",
   "transaction.header.title": "Ostatnie transakcje",
   "transaction.filter.search": "Wpisz szukaną frazę...",
@@ -7,5 +10,9 @@
   "transaction.sort.date.asc": "Rosnąco",
   "transaction.sort.date.desc": "Malejąco",
   "transaction.sort.beneficiary": "Beneficjant",
-  "transaction.sort.amount": "Kwota"
+  "transaction.sort.amount": "Kwota",
+  "transfer.from": "Z konta",
+  "transfer.to": "na konto",
+  "transfer.amount": "Kwota",
+  "transfer.submit": "Zatwierdź"
 }

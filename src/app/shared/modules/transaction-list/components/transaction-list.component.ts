@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TransactionItem } from 'src/app/shared/model/transaction';
 import { CreditDebitIndicator } from 'src/app/shared/model/transaction/creditDebitIndicator.enum';
-import { TransactionList } from 'src/app/shared/model/transaction/transaction-list';
 
 @Component({
   selector: 'app-transaction-list',
@@ -8,11 +8,11 @@ import { TransactionList } from 'src/app/shared/model/transaction/transaction-li
   styleUrls: ['./transaction-list.component.scss']
 })
 export class TransactionListComponent implements OnInit {
-  @Input() set transactionList(ts: TransactionList) {
-    this.list = ts;
+  @Input() set transactionItems(transactionItems: TransactionItem[]) {
+    this.items = transactionItems;
   }
 
-  list: TransactionList;
+  items: TransactionItem[];
   creditDebitIndicator = CreditDebitIndicator;
 
   constructor() { }

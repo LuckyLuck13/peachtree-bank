@@ -29,6 +29,12 @@
     }
 
     @media screen and (max-width: $medium-res) {
+      .sort-button {
+        width: 110px;
+      }
+    }
+
+    @media screen and (max-width: $small-res) {
       flex-direction: column;
 
       .sort-button {

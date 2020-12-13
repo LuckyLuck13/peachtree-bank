@@ -6,6 +6,8 @@ import { TransactionService } from './services/transaction.service';
 import { TransactionListModule } from 'src/app/shared/modules/transaction-list/transaction-list.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { TransactionFiltersModule } from 'src/app/shared/modules/transaction-filters/transaction-filters.module';
+import { TransferModule } from 'src/app/shared/modules/transfer/transfer.module';
+import { TransferService } from 'src/app/shared/modules/transfer/services/transfer.service';
 
 @NgModule({
   declarations: [TransactionComponent],
@@ -15,7 +17,8 @@ import { TransactionFiltersModule } from 'src/app/shared/modules/transaction-fil
     TransactionListModule,
     TranslateModule.forChild(),
     TransactionFiltersModule,
+    TransferModule,
   ],
-  providers: [TransactionService, DatePipe]
+  providers: [TransactionService, DatePipe, TransferService]
 })
 export class TransactionModule { }

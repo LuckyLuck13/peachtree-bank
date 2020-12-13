@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PipesModule } from '../../pipes/pipes.module';
 
 const materials = [
   MatFormFieldModule,
@@ -22,6 +23,7 @@ const materials = [
     TranslateModule.forChild(),
     ReactiveFormsModule,
     FormsModule,
+    PipesModule,
     materials
   ],
   exports: [InputControlComponent]

@@ -1,7 +1,11 @@
-<mat-form-field class="input-field">
+<mat-form-field class="inputClass" appearance="legacy" [floatLabel]="floatLabel">
   <mat-label>{{label | translate}}</mat-label>
-  <input matInput [formControl]="control">
-  <button mat-button *ngIf="control.value" matSuffix mat-icon-button aria-label="Clear" (click)="clearValue()">
+  <span matPrefix *ngIf="prefix">{{prefix}} &nbsp;</span>
+  <input matInput [formControl]="control" placeholder="{{placeholder | translate}}">
+  <button mat-button *ngIf="control.value && !control.disabled" matSuffix mat-icon-button aria-label="Clear" (click)="clearValue()">
     <mat-icon>close</mat-icon>
   </button>
+  <mat-error *ngIf="control.touched && control.invalid && control.errors">
+    {{control.errors | formError}}
+  </mat-error>
 </mat-form-field>

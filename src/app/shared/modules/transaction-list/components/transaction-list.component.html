@@ -1,32 +1,30 @@
-<ng-container *ngIf="list && list.data && list.data.length">
-  <div *ngIf="list && list.data && list.data.length">
-    <div class="list-conteiner" *ngFor="let item of list.data">
-      <div [ngStyle]="{'background-color': item.categoryCode, 'min-height': '70px', 'width': '7px'}"></div>
-      <div class="col-date">
-        <span>{{item.dates.valueDate | date: 'MMM. dd'}}</span>
+<div *ngIf="items && items.length">
+  <div class="list-conteiner" *ngFor="let item of items">
+    <div [ngStyle]="{'background-color': item.categoryCode, 'min-height': '70px', 'width': '7px'}"></div>
+    <div class="col-date">
+      <span>{{item.dates.valueDate | date: 'MMM. dd'}}</span>
+    </div>
+    <div class="col-logo">
+      <img class="img-logo" src="{{item.merchant.name | logoPathPipe}}">
+    </div>
+    <div class="col-customer">
+      <div class="merchant-name">
+        <span>{{item.merchant.name}}</span>
       </div>
-      <div class="col-logo">
-        <img class="img-logo" src="{{item.merchant.name | logoPathPipe}}">
+      <div class="transaction-type">
+        <span>{{item.transaction.type}}</span>
       </div>
-      <div class="col-customer">
-        <div class="merchant-name">
-          <span>{{item.merchant.name}}</span>
-        </div>
-        <div class="transaction-type">
-          <span>{{item.transaction.type}}</span>
-        </div>
+    </div>
+    <div class="col-amount">
+      <div class="indicator">
+        <span *ngIf="item.transaction.creditDebitIndicator === creditDebitIndicator.DBIT">{{'-'}}</span>
       </div>
-      <div class="col-amount">
-        <div class="indicator">
-          <span *ngIf="item.transaction.creditDebitIndicator === creditDebitIndicator.DBIT">{{'-'}}</span>
-        </div>
-        <div class="code">
-          <span>{{item.transaction.amountCurrency.currencyCode}}</span>
-        </div>
-        <div class="amount">
-          <span>{{item.transaction.amountCurrency.amount}}</span>
-        </div>
+      <div class="code">
+        <span>{{item.transaction.amountCurrency.currencyCode}}</span>
+      </div>
+      <div class="amount">
+        <span>{{item.transaction.amountCurrency.amount}}</span>
       </div>
     </div>
   </div>
-</ng-container>
+</div>

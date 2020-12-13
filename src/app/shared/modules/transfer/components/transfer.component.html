@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="content__item">
+    <app-input-control [control]="fromControl" [label]="'transfer.from'" [floatLabel]="'always'" [placeholder]="'from account'"></app-input-control>
+  </div>
+  <div class="content__item">
+    <app-input-control [control]="toControl" [label]="'transfer.to'" [floatLabel]="'always'"></app-input-control>
+  </div>
+  <div class="content__item">
+    <app-input-control [control]="amountControl" [label]="'transfer.amount'" [floatLabel]="'always'" [prefix]="amountSign"></app-input-control>
+  </div>
+  <div class="content__submit">
+    <button mat-raised-button color="warn" [disabled]="transferForm.invalid" (click)="submitTransfer()">{{'transfer.submit' | translate}}</button>
+  </div>
+</div>
+

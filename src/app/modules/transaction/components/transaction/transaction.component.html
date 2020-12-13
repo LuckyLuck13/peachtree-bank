@@ -5,7 +5,7 @@
       <h3 class="header">{{'makeTransfer.header.title' | translate }}</h3>
     </section>
     <section class="make_transfer__panel">
-      
+      <app-transfer></app-transfer>
     </section>
   </div>
   <div class="transactions">
@@ -16,8 +16,8 @@
     <section class="transactions__filters">
       <app-transaction-filters (onFilter)="onFilter($event)" (onSort)="onSort($event)"></app-transaction-filters>
     </section>
-    <section class="transactions__list">
-      <app-transaction-list [transactionList]="transactionList"></app-transaction-list>
+    <section class="transactions__list" *ngIf="transactionList && transactionList.data">
+      <app-transaction-list [transactionItems]="transactionList.data"></app-transaction-list>
     </section>
   </div>
 </div>

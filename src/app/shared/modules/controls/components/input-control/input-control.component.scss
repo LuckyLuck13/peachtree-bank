@@ -1,7 +1,21 @@
-.input-field {
+.field300 {
   width: 300px;
 
   @media screen and (max-width: 500px) {
     width: 200px;
   }
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.boldLabel {
+  font-family: 'Kanit-Medium' !important;
+  font-weight: bold !important;
+  font-size: 1.5em !important;
+}
+
+.normal-label {
+  font-weight: normal;
 }

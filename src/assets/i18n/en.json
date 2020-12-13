@@ -1,4 +1,7 @@
 {
+  "form.error.required": "Field is required",
+  "form.error.bankBalanceOverdraft": "Balance overdraft",
+  "form.error.min": "Minimun transfer amount 0.01",
   "makeTransfer.header.title": "Make a transfer",
   "transaction.header.title": "Recent transactions",
   "transaction.filter.search": "Search by typing...",
@@ -7,5 +10,9 @@
   "transaction.sort.date.asc": "Lowest first",
   "transaction.sort.date.desc": "Highest first",
   "transaction.sort.beneficiary": "Beneficiary",
-  "transaction.sort.amount": "Amount"
+  "transaction.sort.amount": "Amount",
+  "transfer.from": "From account",
+  "transfer.to": "To account",
+  "transfer.amount": "Amount",
+  "transfer.submit": "Submit"
 }
