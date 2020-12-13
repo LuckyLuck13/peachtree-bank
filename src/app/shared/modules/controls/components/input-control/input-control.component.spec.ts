@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormControl } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { InputControlComponent } from './input-control.component';
 
@@ -8,6 +10,7 @@ describe('InputControlComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [TranslateModule.forRoot()],
       declarations: [ InputControlComponent ]
     })
     .compileComponents();
@@ -16,6 +19,7 @@ describe('InputControlComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(InputControlComponent);
     component = fixture.componentInstance;
+    component.control = new FormControl(),
     fixture.detectChanges();
   });
 
