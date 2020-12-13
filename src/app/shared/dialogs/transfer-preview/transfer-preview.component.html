@@ -1,0 +1,37 @@
+<header class="dialog__header">
+  <h2>{{data.title | translate}}</h2>
+</header>
+<section class="dialog__content">
+  <div class="dialog__content__row">
+    <div class="dialog__content title">
+      {{'transfer.from' | translate}}
+    </div>
+    <div class="dialog__content value">
+      {{data.transfer.from}}
+    </div>
+  </div>
+  <div class="dialog__content__row">
+    <div class="dialog__content title">
+      {{'transfer.to' | translate}}
+    </div>
+    <div class="dialog__content value">
+      {{data.transfer.to}}
+    </div>
+  </div>
+  <div class="dialog__content__row">
+    <div class="dialog__content title">
+      {{'transfer.amount' | translate}}
+    </div>
+    <div class="dialog__content value">
+      {{data.transfer.amount}}
+    </div>
+  </div>
+</section>
+<div class="dialog__footer">
+  <div class="footer__button">
+    <button mat-raised-button color="primary" (click)="close(dialogResult.OK)">{{'general.ok' | translate}}</button>
+  </div>
+  <div class="footer__button">
+    <button mat-raised-button (click)="close(dialogResult.CANCEL)">{{'general.cancel' | translate}}</button>
+  </div>
+</div>

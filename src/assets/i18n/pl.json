@@ -2,6 +2,8 @@
   "form.error.required": "Pole jest wymagane",
   "form.error.bankBalanceOverdraft": "Przekroczono maksymalną kwota transferu",
   "form.error.min": "Minimalna kwota transferu 0.01",
+  "general.ok": "OK",
+  "general.cancel": "Anuluj",
   "makeTransfer.header.title": "Wykonaj przelew",
   "transaction.header.title": "Ostatnie transakcje",
   "transaction.filter.search": "Wpisz szukaną frazę...",
@@ -14,5 +16,6 @@
   "transfer.from": "Z konta",
   "transfer.to": "na konto",
   "transfer.amount": "Kwota",
-  "transfer.submit": "Zatwierdź"
+  "transfer.submit": "Zatwierdź",
+  "transfer.dialog.title": "Potwierdź transfer"
 }

@@ -2,6 +2,8 @@
   "form.error.required": "Field is required",
   "form.error.bankBalanceOverdraft": "Balance overdraft",
   "form.error.min": "Minimun transfer amount 0.01",
+  "general.ok": "OK",
+  "general.cancel": "Cancel",
   "makeTransfer.header.title": "Make a transfer",
   "transaction.header.title": "Recent transactions",
   "transaction.filter.search": "Search by typing...",
@@ -14,5 +16,6 @@
   "transfer.from": "From account",
   "transfer.to": "To account",
   "transfer.amount": "Amount",
-  "transfer.submit": "Submit"
+  "transfer.submit": "Submit",
+  "transfer.dialog.title": "Confirm transfer"
 }

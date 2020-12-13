@@ -1,0 +1,56 @@
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/var';
+
+.dialog {
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colors, header-color);
+
+    h2 {
+      color: map-get($colors, header-font-color);
+      margin: 10px;
+    }
+  }
+  font-family: 'Kanit-Light';
+
+  &__content {
+    overflow-y: auto;
+
+    &__row {
+      display: flex;
+      justify-content: flex-start;
+      margin: 5px 0px;
+      
+      .title{
+        padding: 5px 2px;
+        width: 100px;
+        text-align: right;
+
+        &::after {
+          content: ': ';
+        }
+      }
+
+      .value {
+        padding: 5px 2px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    width: calc(100% - 50px);
+
+    &__button {
+      margin: 5px;
+    }
+  }
+}
