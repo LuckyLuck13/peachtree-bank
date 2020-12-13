@@ -8,6 +8,7 @@ import { DialogResult } from 'src/app/shared/dialogs/model/dialog-result';
 import { TransferPreviewData } from 'src/app/shared/dialogs/model/transfer-preview-data';
 import { TransferPreviewComponent } from 'src/app/shared/dialogs/transfer-preview/transfer-preview.component';
 import { Const } from 'src/app/shared/model/const';
+import { NumberUtils } from 'src/app/shared/utils/number-utils';
 import { Transfer } from '../model/transfer';
 import { TransferFormService } from '../services/transfer-form.service';
 import { TransferService } from '../services/transfer.service';
@@ -64,7 +65,7 @@ export class TransferComponent extends BaseComponent implements OnInit {
 
   private getTransferInitValue(): Transfer {
     return {
-      from: `Free Checking(4692) - ${Const.amountSign}${this.transferService.bankBalance}`,
+      from: `Free Checking(4692) - ${Const.amountSign}${NumberUtils.round2(this.transferService.bankBalance)}`,
       to: 'Georgia Power Electric Company',
       amount: 0
     }
