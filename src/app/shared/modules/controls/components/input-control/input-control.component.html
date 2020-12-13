@@ -1,7 +1,7 @@
 <mat-form-field class="inputClass" appearance="legacy" [floatLabel]="floatLabel">
   <mat-label>{{label | translate}}</mat-label>
   <span matPrefix *ngIf="prefix">{{prefix}} &nbsp;</span>
-  <input matInput [formControl]="control" placeholder="{{placeholder | translate}}">
+  <input matInput [type]="controlType" [formControl]="control" placeholder="{{placeholder | translate}}">
   <button mat-button *ngIf="control.value && !control.disabled" matSuffix mat-icon-button aria-label="Clear" (click)="clearValue()">
     <mat-icon>close</mat-icon>
   </button>

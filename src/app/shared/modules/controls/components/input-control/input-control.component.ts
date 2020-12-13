@@ -15,12 +15,11 @@ export class InputControlComponent implements OnInit {
   @Input() floatLabel: FloatLabelOptions = 'auto';
   @Input() placeholder: string;
   @Input() prefix: string;
+  @Input() controlType = 'text';
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.control.disabled
-  }
+  ngOnInit(): void { }
 
   clearValue(): void {
     this.control.setValue('', { onlySelf: false, emitEvent: true });

@@ -6,7 +6,7 @@
     <app-input-control [control]="toControl" [label]="'transfer.to'" [floatLabel]="'always'"></app-input-control>
   </div>
   <div class="content__item">
-    <app-input-control [control]="amountControl" [label]="'transfer.amount'" [floatLabel]="'always'" [prefix]="amountSign"></app-input-control>
+    <app-input-control [control]="amountControl" [label]="'transfer.amount'" [floatLabel]="'always'" [prefix]="amountSign" [controlType]="'number'"></app-input-control>
   </div>
   <div class="content__submit">
     <button mat-raised-button color="warn" [disabled]="transferForm.invalid" (click)="submitTransfer()">{{'transfer.submit' | translate}}</button>
