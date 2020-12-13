@@ -1,11 +1,12 @@
 import { AbstractControl, ValidatorFn } from '@angular/forms';
+import { NumberUtils } from 'src/app/shared/utils/number-utils';
 
 export class TransferValidatorsService {
 
   static maxAmountValidator(bankBalanceFn: () => number, maxOverdraft: number): ValidatorFn {
     return (control: AbstractControl) => {
       if (control.value) {
-        if (TransferValidatorsService.balanceOverdraft(control.value, bankBalanceFn(), maxOverdraft)) {
+        if (NumberUtils.balanceOverdraft(control.value, bankBalanceFn(), maxOverdraft)) {
           return {
             bankBalanceOverdraft: true
           }
@@ -14,10 +15,6 @@ export class TransferValidatorsService {
       };
       return null;
     }
-  }
-
-  static balanceOverdraft(amount: number, bankBalance: number, maxOverdraft: number): boolean {
-    return amount > bankBalance + (0 - maxOverdraft);
   }
 
 }

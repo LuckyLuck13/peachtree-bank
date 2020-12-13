@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
+import { NumberUtils } from 'src/app/shared/utils/number-utils';
 import { Transfer } from '../model/transfer';
-import { TransferValidatorsService } from './transfer-validators.service';
 
 @Injectable()
 export class TransferService {
@@ -26,7 +26,7 @@ export class TransferService {
   }
 
   private canMakeTransfer(transfer: Transfer, group: FormGroup): boolean {
-    return group.valid && !TransferValidatorsService.balanceOverdraft(transfer.amount, this.bankBalance, this.maxOverdraft);
+    return group.valid && !NumberUtils.balanceOverdraft(transfer.amount, this.bankBalance, this.maxOverdraft);
   }
   
 }
