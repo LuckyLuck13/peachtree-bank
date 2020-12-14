@@ -20,6 +20,8 @@ export class TransactionFiltersComponent extends BaseComponent implements OnInit
   sortOrder = SortOrder;
   sortFields = TransactionSortFields;
   sortType = SortType;
+  
+  private lastSortField: TransactionSortFields;
 
   constructor() {
     super();
@@ -30,6 +32,7 @@ export class TransactionFiltersComponent extends BaseComponent implements OnInit
   }
 
   sortByField(field: TransactionSortFields, type: SortType): void {
+    this.setSortOrder(field);
     this.emitSort(({ ...this.sort, field, type }))
   }
 
@@ -47,6 +50,21 @@ export class TransactionFiltersComponent extends BaseComponent implements OnInit
   private emitSort(sort: TransactionSort): void {
     this.sort = sort;
     this.onSort.emit(this.sort);
+  }
+
+  private setSortOrder(field: TransactionSortFields): void {
+    if (this.lastSortField === field) {
+      this.changeSortOrder();
+    }
+    this.lastSortField = field;
+  }
+
+  private changeSortOrder(): void {
+    if (this.sort.order === SortOrder.ASC) {
+      this.sort.order = SortOrder.DESC;
+    } else {
+      this.sort.order = SortOrder.ASC;
+    }
   }
 
 }

@@ -4,6 +4,7 @@ import { ObjectUtils } from 'src/app/shared/utils/object.utils';
 import { SortOrder, SortType, TransactionSort } from '../model/transaction-sort';
 import { TransactionSortFields } from '../model/transaction-sort-fields.enum';
 import * as moment from 'moment';
+import { CreditDebitIndicator } from 'src/app/shared/model/transaction/creditDebitIndicator.enum';
 
 const transactionFieldMapper: FieldMapper<TransactionSortFields> = {
   DATE: ['dates', 'valueDate'],
@@ -22,6 +23,21 @@ export class SortService {
         [a, b] = [b, a];
       }
       if (sort.type === SortType.NUMBER) {
+        if (sort.order === SortOrder.ASC) {
+          if (!item1.transaction.creditDebitIndicator || item1.transaction.creditDebitIndicator === CreditDebitIndicator.DBIT) {
+            a *= -1;
+          }
+          if (!item2.transaction.creditDebitIndicator || item2.transaction.creditDebitIndicator === CreditDebitIndicator.DBIT) {
+            b *= -1;
+          }
+        } else {
+          if (!item1.transaction.creditDebitIndicator || item1.transaction.creditDebitIndicator === CreditDebitIndicator.DBIT) {
+            b *= -1;
+          }
+          if (!item2.transaction.creditDebitIndicator || item2.transaction.creditDebitIndicator === CreditDebitIndicator.DBIT) {
+            a *= -1;
+          }
+        }
         return a - b;
       }
       if (sort.type === SortType.DATE) {
