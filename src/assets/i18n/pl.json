@@ -16,6 +16,6 @@
   "transfer.from": "Z konta",
   "transfer.to": "na konto",
   "transfer.amount": "Kwota",
-  "transfer.submit": "Zatwierdź",
+  "transfer.submit": "ZATWIERDŹ",
   "transfer.dialog.title": "Potwierdź transfer"
 }

@@ -11,6 +11,10 @@
     background-repeat: no-repeat;
     background-position: 10% 50%;
 
+    border-top: 1px ridge map-get($colors, top-border-color);
+    border-right: 1px ridge map-get($colors, right-border-color);
+    border-bottom: 3px ridge map-get($colors, top-border-color);
+
     @media screen and (max-width: $medium-res) {
       display: none;
     }

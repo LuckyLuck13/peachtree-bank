@@ -16,6 +16,6 @@
   "transfer.from": "From account",
   "transfer.to": "To account",
   "transfer.amount": "Amount",
-  "transfer.submit": "Submit",
+  "transfer.submit": "SUBMIT",
   "transfer.dialog.title": "Confirm transfer"
 }
