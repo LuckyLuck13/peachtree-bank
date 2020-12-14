@@ -5,7 +5,7 @@
   "general.ok": "OK",
   "general.cancel": "Anuluj",
   "makeTransfer.header.title": "Wykonaj przelew",
-  "transaction.header.title": "Ostatnie transakcje",
+  "transaction.header.title": "Ostatnie Transakcje",
   "transaction.filter.search": "Wpisz szukaną frazę...",
   "transaction.sortBy": "Sortuj wg",
   "transaction.sort.date": "Data",

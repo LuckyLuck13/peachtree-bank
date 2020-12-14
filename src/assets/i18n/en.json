@@ -5,7 +5,7 @@
   "general.ok": "OK",
   "general.cancel": "Cancel",
   "makeTransfer.header.title": "Make a transfer",
-  "transaction.header.title": "Recent transactions",
+  "transaction.header.title": "Recent Transactions",
   "transaction.filter.search": "Search by typing...",
   "transaction.sortBy": "Sort by",
   "transaction.sort.date": "Date",

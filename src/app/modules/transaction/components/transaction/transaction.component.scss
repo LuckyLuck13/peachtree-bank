@@ -14,7 +14,9 @@
 
   .make_transfer {
     margin-right: 30px;
-    width: 30%;
+    width: 25%;
+    max-height: 360px;
+    background-color: map-get($colors, transaction-main-header-color);
 
     @media screen and (max-width: $medium-res) {
       width: 100%;
@@ -22,6 +24,7 @@
 
     &__title {
       font-family: 'Kanit-Thin';
+      border-radius: 1px;
       background-color: map-get($colors, header-color);
       color: map-get($colors, header-font-color);
       height: 35px;
@@ -46,7 +49,7 @@
   }
 
   .transactions {
-    width: 70%;
+    width: 75%;
 
     @media screen and (max-width: $medium-res) {
       width: 100%;
@@ -74,10 +77,14 @@
 
     &__filters {
       padding: $padding-vertical $padding-horizontal;
+      background-color: map-get($colors, transaction-main-header-color);
+      border-radius: 1px;
     }
 
     &__list {
       padding: $padding-vertical $padding-horizontal;
+      background-color: map-get($colors, transaction-main-header-color);
+      border-radius: 1px;
     }
   }
 }

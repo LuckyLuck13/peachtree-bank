@@ -8,9 +8,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TransactionFiltersModule } from 'src/app/shared/modules/transaction-filters/transaction-filters.module';
 import { TransferModule } from 'src/app/shared/modules/transfer/transfer.module';
 import { TransferService } from 'src/app/shared/modules/transfer/services/transfer.service';
+import { TransactionBaseComponent } from './components/transaction-base/transaction-base.component';
 
 @NgModule({
-  declarations: [TransactionComponent],
+  declarations: [TransactionComponent, TransactionBaseComponent],
   imports: [
     CommonModule,
     TransactionRoutingModule,

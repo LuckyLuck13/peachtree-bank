@@ -3,6 +3,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  background-color: map-get($colors, transaction-main-header-color);
 
   @media screen and (max-width: $large-res) {
     display: block;

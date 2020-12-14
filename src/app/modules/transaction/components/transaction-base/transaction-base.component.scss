@@ -1,0 +1,18 @@
+@import '../../../../../assets/styles/var';
+
+.transaction-base-content {
+  background: url('../../../../../assets//background.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  .page_header {
+    height: 80px;
+    background-color: map-get($colors, transaction-main-header-color);
+    background-image: url('../../../../../assets/logo.jpg');
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+
+    @media screen and (max-width: $medium-res) {
+      display: none;
+    }
+  }
+}
