@@ -4,7 +4,7 @@
   "form.error.min": "Minimalna kwota transferu 0.01",
   "general.ok": "OK",
   "general.cancel": "Anuluj",
-  "makeTransfer.header.title": "Wykonaj przelew",
+  "makeTransfer.header.title": "Wykonaj Przelew",
   "transaction.header.title": "Ostatnie Transakcje",
   "transaction.filter.search": "Wpisz szukaną frazę...",
   "transaction.sortBy": "Sortuj wg",
@@ -17,5 +17,5 @@
   "transfer.to": "na konto",
   "transfer.amount": "Kwota",
   "transfer.submit": "ZATWIERDŹ",
-  "transfer.dialog.title": "Potwierdź transfer"
+  "transfer.dialog.title": "Potwierdź Transfer"
 }

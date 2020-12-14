@@ -4,7 +4,7 @@
   "form.error.min": "Minimun transfer amount 0.01",
   "general.ok": "OK",
   "general.cancel": "Cancel",
-  "makeTransfer.header.title": "Make a transfer",
+  "makeTransfer.header.title": "Make a Transfer",
   "transaction.header.title": "Recent Transactions",
   "transaction.filter.search": "Search by typing...",
   "transaction.sortBy": "Sort by",
@@ -17,5 +17,5 @@
   "transfer.to": "To account",
   "transfer.amount": "Amount",
   "transfer.submit": "SUBMIT",
-  "transfer.dialog.title": "Confirm transfer"
+  "transfer.dialog.title": "Confirm Transfer"
 }
