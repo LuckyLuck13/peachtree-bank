@@ -22,7 +22,7 @@
     </div>
     <div class="col-amount">
       <div class="indicator">
-        <span *ngIf="item.transaction.creditDebitIndicator === creditDebitIndicator.DBIT">{{'-'}}</span>
+        <span *ngIf="!item.transaction.creditDebitIndicator || item.transaction.creditDebitIndicator === creditDebitIndicator.DBIT">{{'-'}}</span>
       </div>
       <div class="code">
         <span>{{item.transaction.amountCurrency.currencyCode}}</span>
