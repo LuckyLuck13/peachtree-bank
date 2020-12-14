@@ -5,7 +5,12 @@
       <span>{{item.dates.valueDate | date: 'MMM. dd'}}</span>
     </div>
     <div class="col-logo">
-      <img class="img-logo" src="{{item.merchant.name | logoPathPipe}}">
+      <ng-container *ngIf="item.merchant.name | hasLogo; else emptyLogo">
+        <img class="img-logo" src="{{item.merchant.name | logoPathPipe}}">
+      </ng-container>
+      <ng-template #emptyLogo>
+        <div class="img-logo"></div>
+      </ng-template>
     </div>
     <div class="col-customer">
       <div class="merchant-name">
